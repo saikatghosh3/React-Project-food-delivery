@@ -25,10 +25,10 @@ function Section5() {
                     dolar primis libero tempus, blandit varius
                 </p>
                 <Link to="/">
-                    <img src={StoreIOS} alt='IOS' className='img-fluid me-3'/>
+                    <img src={StoreIOS} alt='IOS' className='img-fluid store me-3'/>
                 </Link>
                 <Link to="/">
-                    <img src={StoreGoogle} alt='Android' className='img-fluid me-3'/>
+                    <img src={StoreGoogle} alt='Android' className='img-fluid  store me-3'/>
                 </Link>
                 </Col>
                 <Col lg={6}>
@@ -62,13 +62,33 @@ function Section5() {
             <div className='brand_img'>
                 <img src={Brand6} className='img-fluid' alt='brand-6'/>
             </div>
+            
+         </div>
+          
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>   
+     <Carousel.Caption>
+         <div className='d-flex align-items-center justify-content-between'>
+            <div className='brand_img'>
+                <img src={Brand3} className='img-fluid' alt='brand-3'/>
+            </div>
+            <div className='brand_img'>
+                <img src={Brand4} className='img-fluid' alt='brand-4'/>
+            </div>
             <div className='brand_img'>
                 <img src={Brand7} className='img-fluid' alt='brand-7'/>
             </div>
             <div className='brand_img'>
                 <img src={Brand8} className='img-fluid' alt='brand-8'/>
             </div>
-
+            <div className='brand_img'>
+                <img src={Brand2} className='img-fluid' alt='brand-2'/>
+            </div>
+            <div className='brand_img'>
+                <img src={Brand6} className='img-fluid' alt='brand-6'/>
+            </div>
+            
          </div>
           
         </Carousel.Caption>
