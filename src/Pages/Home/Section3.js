@@ -78,6 +78,30 @@ import { Link } from 'react-router-dom';
   },
   // Add more mock data objects as needed
 ];
+
+// Rating Logical Data
+const renderRatingIcons =(rating) =>{
+  const stars = [];
+
+  for(let i = 0;i<5;i++){
+    if(rating > 0.5){
+      stars.push(<i key={i} className='bi bi-star-fill'></i>);
+      rating--;
+
+        
+      }else if(rating >0 && rating <1){
+        stars.push(<i key={"half"} className='bi bi-star-half'></i>);
+        rating--;
+      } else {
+        stars.push(<i key={`empty{i}`} className='bi bi-star'></i>);
+      }
+    }
+    return stars;
+  }
+
+
+
+
 const Section3 = () => {
   return (
     <>
@@ -100,15 +124,16 @@ const Section3 = () => {
                 titie={cardData.title}
                 paragraph={cardData.paragraph}
                 price={cardData.price}
+                renderRatingIcons={renderRatingIcons}
                 />
-                // renderRatingIcons={renderRatingIcons}
+                
                 
             ))}
         </Row>
 
         <Row className='pt-5'>
           <Col sm={6} lg={5}>
-            <div className='abs_box ads_img'>
+            <div className='ads_box ads_img1'>
             <h4 className='mb-0'>GET YOUR FREE</h4>
             <h5 className='mb-0'>CHEESE FRIES</h5>
             <Link to ="/" className='btn btn_red px-4 rounded-0'>
@@ -116,8 +141,8 @@ const Section3 = () => {
             </Link>
             </div>
           </Col>
-          <Col sm={6} lg={7}>
-            <div className='abs_box ads_img'>
+          <Col sm={6} lg={6}>
+            <div className='ads_box ads_img2'>
             <h4 className='mb-0'>GET YOUR FREE</h4>
             <h5 className='mb-0'>CHEESE FRIES</h5>
             <Link to ="/" className='btn btn_red px-4 rounded-0'>
