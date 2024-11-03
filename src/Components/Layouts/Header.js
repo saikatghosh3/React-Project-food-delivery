@@ -6,11 +6,11 @@ import Logo from "../../assets/logo/logo.png";
 
 function Header() {
 
-  const[nav, setNav] = useState(false);
+  const[nav, SetNav] = useState(false);
   //Scroll navbar
   const changeValueOnScroll = () => {
-    const scrolValue = document?.documentElement.scrollTop;
-    scrolValue > 100? setNav(true) : setNav(false);
+    const scrollValue = document?.documentElement?.scrollTop;
+    scrollValue > 100 ? SetNav(true) : SetNav(false);
   };
 
   window.addEventListener("scroll", changeValueOnScroll);
@@ -20,7 +20,7 @@ function Header() {
     <header>
     <Navbar collapseOnSelect 
     expand="lg" 
-    className={`${nav === true ? "sticky" : " "}`}>
+    className={`${nav === true ? 'sticky' : ""}`}>
       <Container>
         <Navbar.Brand href="#home">
             <Link to="/" className='logo'>
